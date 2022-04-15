@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import createError from 'http-errors';
+import moment from 'moment';
 import controller from '../controller/Stormtrooper.js';
 
 const trooperRoutes = new Router();
@@ -10,6 +11,7 @@ const verifyId = (request, response, next) => {
     }
     next()
 }
+
 trooperRoutes.get('/', controller.list)
 trooperRoutes.get('/:id', verifyId, controller.byId)
 trooperRoutes.post('/', controller.create)

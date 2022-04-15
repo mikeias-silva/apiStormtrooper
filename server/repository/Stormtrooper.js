@@ -9,7 +9,7 @@ const Stormtrooper = {
         return model.find(query)
     },
     byId(id) {
-        return model.findOne(id)
+        return model.findOne({_id: id})
     },
     create(data) {
         const trooper = new model(data)
