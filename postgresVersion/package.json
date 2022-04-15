@@ -17,9 +17,14 @@
     "dnscache": "^1.0.2",
     "express": "^4.17.3",
     "http-errors": "^1.8.1",
+    "jwt-simple": "^0.5.6",
+    "moment": "^2.29.2",
     "mongoose": "^6.2.10",
     "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-http": "^0.3.0",
     "pg": "^8.7.3",
+    "promise-redis": "^0.0.5",
     "redis": "^4.0.6"
   },
   "engines": {

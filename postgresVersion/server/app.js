@@ -2,6 +2,7 @@
 import express from 'express'; //com module type
 import cors from 'cors';
 import routes from '../routes/index.js';
+
 const app = express();
 
 app.use(cors());

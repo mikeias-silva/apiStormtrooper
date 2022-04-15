@@ -9,5 +9,5 @@ const pool = new pg.Pool({
     database: 'livro_nodejs',
     max: 5
 })
-pool.on('error', (err) => log('postgress error:', err))
+pool.on('ERROR', (err) => log('POSTGRES ERROR:', err))
 export default pool
