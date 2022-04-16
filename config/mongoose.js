@@ -1,7 +1,6 @@
 import debug from 'debug'
 import mongoose from 'mongoose'
 import config from 'config'
-import dotenv from 'dotenv/config'
 
 
 const log = debug('livro_nodejs:config:mongoose')
