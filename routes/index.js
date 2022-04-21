@@ -4,6 +4,8 @@ import createError from "http-errors";
 import jwt from 'jwt-simple'
 import moment from 'moment';
 import config from "config";
+import verifyId from '../server/middleware/verifyId.js'
+import checkRoutes from './check.js'
 
 const routes = new Router();
 
@@ -42,6 +44,8 @@ const verifyJwt = (request, response, next) => {
     }
 }
 
-routes.use('/troopers', verifyJwt, trooperRoutes)
+routes.use('/troopers', trooperRoutes)
+routes.use('/checks', checkRoutes)
+
 
 export default routes

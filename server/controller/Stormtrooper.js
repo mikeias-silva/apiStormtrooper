@@ -1,12 +1,6 @@
 import repository from '../repository/Stormtrooper.js'
 import createError from 'http-errors'
-
-const handleNotFound = (result) => {
-    if (!result) {
-        throw createError(404, 'trooper não encontrado!')
-    }
-    return result
-}
+import { handleNotFound } from './util.js'
 
 const Stormtrooper = {
     list(request, response, next) {
