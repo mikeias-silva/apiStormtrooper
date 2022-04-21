@@ -5,13 +5,6 @@ import controller from '../controller/Stormtrooper.js';
 
 const trooperRoutes = new Router();
 
-const verifyId = (request, response, next) => {
-    const id = request.params.id
-    if (!/^[0-9]+$/.test(id)) {
-        return next(createError(422, 'id inválido'))
-    }
-    next()
-}
 
 const fromCache = (request, response, next) => {
     const key = `trooper:${request.params.id}`
