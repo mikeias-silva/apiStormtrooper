@@ -5,9 +5,10 @@ import routes from '../routes/index.js';
 import dotenv from 'dotenv/config'
 import compression from 'compression'
 import helmet from 'helmet';
-
 const app = express();
-app.use(compression({threshold:0}))
+
+
+app.use(compression({ threshold: 0 }))
 app.use(cors());
 app.disable('X-Powered-By')
 app.use(helmet())
@@ -17,6 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({
     extended: true
 }))
+
 
 // if (app.get('env') === 'development') {
 //     app.use(express.static(path.join(__dirname, 'public')));
